@@ -2,10 +2,10 @@ var Stack = function() {
   var obj = {};
   var storage = {};
   obj.count = 0;
-  obj.size = stackMethods.size;
-  obj.push = stackMethods.push;
-  obj.pop = stackMethods.pop;
   obj.values = storage;
+  _.extend(obj, stackMethods)
+
+
 
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
