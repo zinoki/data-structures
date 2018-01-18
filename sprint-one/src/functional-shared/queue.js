@@ -13,18 +13,17 @@ var Queue = function() {
 var queueMethods = {};
 queueMethods.size = function() {
   return this.right - this.left < 0 ? 0 : this.right - this.left;
-  //return Object.keys(this.values).length;
-}
+
+};
 
 queueMethods.enqueue = function(value) {
   this.values[this.right] = value;
   this.right++;
-}
+};
 
 queueMethods.dequeue = function() {
   var temp = this.values[this.left];
   delete this.values[this.left-1];
   this.left++;
   return temp;
-
-}
+};
