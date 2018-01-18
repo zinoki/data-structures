@@ -3,7 +3,7 @@ var Stack = function() {
   var storage = {};
   obj.count = 0;
   obj.values = storage;
-  _.extend(obj, stackMethods)
+  _.extend(obj, stackMethods);
 
 
 
@@ -25,8 +25,8 @@ stackMethods.push = function(value) {
 };
 
 stackMethods.pop = function() {
-  var temp = this.values[this.count-1];
-  delete this.values[this.count-1];
+  var temp = this.values[this.count - 1];
+  delete this.values[this.count - 1];
   this.count--;
   return temp;
 };
