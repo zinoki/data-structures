@@ -17,16 +17,16 @@ var Stack = function() {
 var stackMethods = {};
 stackMethods.size = function() {
   return Object.keys(this.values).length;
-}
+};
 
 stackMethods.push = function(value) {
   this.values[this.count] = value;
   this.count++;
-}
+};
 
 stackMethods.pop = function() {
   var temp = this.values[this.count-1];
   delete this.values[this.count-1];
   this.count--;
   return temp;
-}
+};
