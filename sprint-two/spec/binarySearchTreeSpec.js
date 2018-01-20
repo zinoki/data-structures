@@ -37,4 +37,13 @@ describe('binarySearchTree', function() {
     binarySearchTree.depthFirstLog(func);
     expect(array).to.eql([5, 2, 3, 7]);
   });
+  
+  it('should be able to insert values, check contains, and add more values', function() {
+    binarySearchTree.insert(2);
+    binarySearchTree.insert(7);
+    expect(binarySearchTree.contains(7)).to.equal(true);
+    binarySearchTree.insert(3);
+    expect(binarySearchTree.contains(3)).to.equal(true);
+  });
+
 });
