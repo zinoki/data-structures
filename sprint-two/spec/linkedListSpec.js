@@ -51,5 +51,13 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should return the number of nodes inside the list', function() {
+    linkedList.addToTail(4);
+    linkedList.addToTail(5);
+    linkedList.removeHead();
+    linkedList.addToTail(6);
+    expect(linkedList.count).to.equal(2);
+  });
+
   // add more tests here to test the functionality of linkedList
 });
