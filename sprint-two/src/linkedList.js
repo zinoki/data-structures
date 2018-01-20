@@ -15,7 +15,6 @@ var LinkedList = function() {
       list.tail = newNode;
       list.count++;
     }
-    
   };
 
   list.removeHead = function() {
@@ -33,14 +32,13 @@ var LinkedList = function() {
         return true;
       }
       currentHead = currentHead.next;
-    };
+    }
     return false;
   };
 
   list.size = function() {
     return list.count;
   };
-
   return list;
 };
 
