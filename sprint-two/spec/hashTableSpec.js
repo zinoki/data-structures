@@ -47,6 +47,14 @@ describe('hashTable', function() {
     window.getIndexBelowMaxForKey = oldHashFunction;
   });
 
+  it('should not contain values that were not inserted and overwrite values that have the same key', function() {
+    hashTable.insert('Steven', 'Spielberg');
+    expect(hashTable.retrieve('Steven')).not.to.equal('Seagal');
+    hashTable.insert('Bob', 'Loblaw');
+    hashTable.insert('Bob', 'Barker');
+    expect(hashTable.retrieve('Bob')).to.equal('Barker');
+  });
+
   // (Advanced! Remove the extra "x" when you want the following tests to run)
   xit ('should double in size when needed', function() {
     _.each(people, function(person) {
